@@ -1,0 +1,23 @@
+{
+  "name": "rap-patches",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare#skip": "mkdir -p vendor && rm -rf ./vendor/* && cd vendor && wget https://github.com/thx/rap2-delos/archive/v2.1.5.tar.gz && tar xzf v2.1.5.tar.gz",
+    "build": "rimraf -rf dist/ && tsc && touch dist/_patched",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/md5": "^2.2.0",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^13.13.4",
+    "@types/sequelize": "^4.28.8",
+    "rimraf": "^3.0.2",
+    "sequelize-typescript": "^1.1.0",
+    "svg-captcha": "^1.4.0",
+    "typescript": "^3.8.3"
+  }
+}
